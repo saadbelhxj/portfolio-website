@@ -133,6 +133,46 @@ video {
     z-index: 40;
 }
 
+.header-leading {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    min-width: 0;
+}
+
+.language-toggle {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 58px;
+    min-height: 42px;
+    padding: 0 14px;
+    border: 1px solid rgba(18, 34, 56, 0.12);
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.44);
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.56);
+    color: var(--accent-strong);
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 0.8rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    transition: transform 260ms var(--ease-spring), background-color 220ms ease, border-color 220ms ease, box-shadow 260ms var(--ease-smooth), color 220ms ease;
+}
+
+.language-toggle:hover,
+.language-toggle:focus-visible {
+    color: var(--accent);
+    background: rgba(255, 255, 255, 0.9);
+    border-color: rgba(18, 117, 107, 0.22);
+    box-shadow: 0 14px 28px rgba(18, 34, 56, 0.12);
+    transform: translateY(-2px);
+    outline: none;
+}
+
+.language-toggle:active {
+    transform: translateY(-1px) scale(0.98);
+}
+
 .brand {
     display: inline-flex;
     align-items: center;
@@ -1082,6 +1122,7 @@ video {
     .btn,
     .nav-link,
     .social-links a,
+    .language-toggle,
     .text-link,
     .backdrop-video,
     .site-header,
@@ -1103,6 +1144,9 @@ video {
     .btn:hover,
     .btn:focus-visible,
     .btn:active,
+    .language-toggle:hover,
+    .language-toggle:focus-visible,
+    .language-toggle:active,
     .nav-link:hover,
     .nav-link.is-active,
     .nav-link:focus-visible,
